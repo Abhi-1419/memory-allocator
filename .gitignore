@@ -1,5 +1,3 @@
-*.o
-*.out
-*.exe
 allocator
-build/
+*.o
+.vscode/

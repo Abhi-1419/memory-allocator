@@ -1,18 +1,20 @@
 #include <stdio.h>
-#include "../include/block.h"
+#include "block.h"
 
 int main(void)
 {
-    char *p = my_malloc(100);
+    char *a = my_malloc(100);
+    char *b = my_malloc(200);
 
-    if (p == NULL) {
-        printf("Allocation failed!\n");
-        return 1;
-    }
+    printf("a = %p\n", a);
+    printf("b = %p\n", b);
 
-    p[0] = 'A';
+    my_free(a);
+    my_free(b);
 
-    printf("%c\n", p[0]);
+    char *c = my_malloc(250);
+
+    printf("c = %p\n", c);
 
     return 0;
 }
